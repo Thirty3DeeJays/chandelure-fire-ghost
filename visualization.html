@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.29.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.18.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.24.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "projection": {"type": "mercator", "center": [19, 53], "scale": 550},
+  "layer": [
+    {
+      "data": {
+        "url": "data/world-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "mark": {"type": "geoshape", "fill": "#2c7fb8", "stroke": "white"}
+    },
+    {
+      "data": {
+        "values": [
+          {"Country": "Ireland", "Age": 26.9, "lon": -8, "lat": 53},
+          {"Country": "Belgium", "Age": 26.3, "lon": 4, "lat": 50.83},
+          {"Country": "Luxembourg", "Age": 26.8, "lon": 6.1296, "lat": 49.8153},
+          {"Country": "Spain", "Age": 30.3, "lon": -4, "lat": 40},
+          {"Country": "Portugal", "Age": 29.7, "lon": -8, "lat": 39.5},
+          {"Country": "Italy", "Age": 30, "lon": 11.83, "lat": 43.83},
+          {"Country": "Malta", "Age": 30.1, "lon": 14.58, "lat": 35.83},
+          {"Country": "Solvenia", "Age": 29.4, "lon": 15, "lat": 46},
+          {"Country": "France", "Age": 23.4, "lon": 2, "lat": 46},
+          {"Country": "Netherlands", "Age": 23, "lon": 5.75, "lat": 52.5},
+          {"Country": "Sweeden", "Age": 21.4, "lon": 15, "lat": 62},
+          {"Country": "Finland", "Age": 21.3, "lon": 26, "lat": 64},
+          {"Country": "Denmark", "Age": 21.7, "lon": 9, "lat": 56},
+          {"Country": "Germany", "Age": 23.8, "lon": 9, "lat": 51},
+          {"Country": "Austria", "Age": 25.3, "lon": 14.33, "lat": 47.33},
+          {"Country": "Croatia", "Age": 33.4, "lon": 15.5, "lat": 45.17},
+          {"Country": "Czechia", "Age": 25.9, "lon": 15.5, "lat": 49.75},
+          {"Country": "Poland", "Age": 28.9, "lon": 20, "lat": 52},
+          {"Country": "Latvia", "Age": 26.8, "lon": 25, "lat": 57},
+          {"Country": "Estonia", "Age": 22.7, "lon": 26, "lat": 59},
+          {"Country": "Lithuania", "Age": 24.7, "lon": 24, "lat": 55.5},
+          {"Country": "Slovakia", "Age": 30.8, "lon": 19.5, "lat": 48.67},
+          {"Country": "Hungary", "Age": 27.1, "lon": 20, "lat": 47},
+          {"Country": "Greece", "Age": 30.7, "lon": 22, "lat": 39},
+          {"Country": "Cyprus", "Age": 27.5, "lon": 33, "lat": 35},
+          {"Country": "Bulgaria", "Age": 30.3, "lon": 25, "lat": 43},
+          {"Country": "Romania", "Age": 27.7, "lon": 25, "lat": 46}
+        ]
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "color": {
+          "field": "Age",
+          "type": "quantitative",
+          "scale": {"domain": [20, 35], "range": ["#fee838", "#f03b20"]},
+          "legend": {
+            "title": "Average Age A Person Leaves their Childhood Home"
+          }
+        },
+        "size": {"field": "Age", "type": "nominal"}
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "point",
+            "tooltip": {"content": "data"},
+            "filled": true
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
