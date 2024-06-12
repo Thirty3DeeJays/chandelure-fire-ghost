@@ -396,22 +396,7 @@ input, select, textarea {
 				.row.gtr-0.gtr-uniform > * {
 					padding-top: 0px;
 				}
-		.row.gtr-custom {
-			margin-top: -250px;
-			margin-left: 0px;
-		}
 
-			.row.gtr-custom > * {
-				padding: -250px 0 0 0px;
-			}
-
-			.row.gtr-custom.gtr-uniform {
-				margin-top: 0px;
-			}
-
-				.row.gtr-custom.gtr-uniform > * {
-					padding-top: 0px;
-				}
 
 		.row.gtr-25 {
 			margin-top: -12.5px;
