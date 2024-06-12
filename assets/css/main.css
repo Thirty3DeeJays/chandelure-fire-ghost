@@ -401,15 +401,15 @@ input, select, textarea {
 			margin-left: 0px;
 		}
 
-			.row.gtr-0 > * {
+			.row.gtr-custom > * {
 				padding: -250px 0 0 0px;
 			}
 
-			.row.gtr-0.gtr-uniform {
+			.row.gtr-custom.gtr-uniform {
 				margin-top: 0px;
 			}
 
-				.row.gtr-0.gtr-uniform > * {
+				.row.gtr-custom.gtr-uniform > * {
 					padding-top: 0px;
 				}
 
