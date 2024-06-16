@@ -32,18 +32,13 @@
 			width: 33%;
 			padding: 5px
 		}
-		.centerimgnarrow {
-			display: incline-block;
-			width: 33%;
-			
-			margin-left: 35%;
-			margin-right: 50%;
-		}
-		.rightimgnarrow {
-			width: 33%;
-			margin-left: 75%;
-			margin-right: 25%;
-		}
+		/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 	</style>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -180,6 +175,10 @@
 									<div class = "leftimgnarrow">
 									<img src = "CharizardStats.png" alt>
 									</div>
+									<div class = "imgleftnarrow">
+									<img src = "BlastoiseStats.png" alt">
+									</div>
+										
 									
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
