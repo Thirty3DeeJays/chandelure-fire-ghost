@@ -210,19 +210,27 @@ text-align: left;
 									<div class = "centerimg">
 									<pre>
 									<code>
-										min_max <- data.frame(
-  										row.names = c("Min","Max"),
-  										HP = c(0, 110),
-  										Attack = c(0,110),
-  										Defense = c(0,110),
-  										Special_Attack = c(0,110),
-  										Special_Defense = c(0,110),
-  										Speed = c(0,110)
+										maxi_mini <- data.frame(
+  										row.names = c("Max","Min"),
+  										HP = c(110,0),
+  										Attack = c(110,0),
+  										Defense = c(110,0),
+  										Special_Attack = c(110,0),
+  										Special_Defense = c(110,0),
+  										Speed = c(110,0)
 										)
-										min_max	
+										maxi_mini
 									</code>	
 									</pre>
 									</div>
+									<p>Now, we just need to combine the two data sets, since, in order to create a radar chart in R, you have to have the data set in a way that:
+									<ol>
+  									<li>The data set's first row is the maximum value (or higher) for each value.</li>
+  									<li>The data set's second row is the minimum value (or lower/is 0) for each value.</li>
+  									<li>There is more than 2 data points to be shown.</li>
+									<li>Each row following the first two are your data points.</li>
+									</ol>
+									We can use R code to set up our data like that:</p>
 										
 									
 		<!-- Scripts -->
