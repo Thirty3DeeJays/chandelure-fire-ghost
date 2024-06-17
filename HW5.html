@@ -232,7 +232,27 @@ margin-right: 300px;
 									<li>Each row following the first two are your data points.</li>
 									</ol>
 									We can use R code to set up our data like that:</p>
-										
+									<div class = "centerimg">
+									<pre>
+									<code>
+										df_maxmin <- rbind(maxi_mini,base_stats)
+										df_maxmin
+									</code>	
+									</pre>
+									</div>
+									<p>Great! If you're following with my data, you should have a data frame with 5 rows, the first two being called "Max" and "Min" and the rest
+									are the names of the 3 Kanto starters.</p>
+									<h3>Making the Radar Chart</h3>
+									<p>Now, its time to make the radar chart. For now, let's just take a look at Venusaur's stats.</p>
+									<div class = "centerimg">
+									<pre>
+									<code>
+										VenusaurStats <- df_maxmin[c("Max","Min","Venusaur"),]
+										radarchart(VenusaurStats)
+									</code>	
+									</pre>
+									</div>
+									<p>And you should get something like this!</p>	
 									
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
