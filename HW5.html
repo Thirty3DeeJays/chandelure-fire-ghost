@@ -248,7 +248,8 @@ margin-right: 300px;
 									<pre>
 									<code>
 										VenusaurStats <- df_maxmin[c("Max","Min","Venusaur"),]
-										radarchart(VenusaurStats)
+										VenuRadar <- radarchart(VenusaurStats)
+										VenuRadar
 									</code>	
 									</pre>
 									</div>
@@ -256,7 +257,22 @@ margin-right: 300px;
 									<span class="image main">
 									<img src=RadarVenu.png alt>
 									</span>
-									
+									<h3>Making adjustments and adding more variables</h3>
+									<p>Theres a lot of arguements you can add to the inside of the "radarchart" parenthesis. These are mainly to mess with the look of the chart
+									and to make it look nicer. I will add some basic ones with this code, including:
+									<ul>
+  									<li>axistype = 4: enables "caxislabels" to show</li>
+  									<li>caxislabels = c(0,22.5,55,82.5,110)</li>
+  									<li>There is more than 2 data points to be shown.</li>
+									<li>Each row following the first two are your data points.</li>
+									</ul></p>
+									<div class = "centerimg">
+									<pre>
+									<code>
+
+									</code>	
+									</pre>
+									</div>
 									
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
