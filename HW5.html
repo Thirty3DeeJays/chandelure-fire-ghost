@@ -13,7 +13,7 @@
 	</head>
 	<style>
 		.centerimg {
-
+text-align: left;
   margin-left: -300px;
   margin-right: 430px;
 }
@@ -207,6 +207,22 @@
 									well as data that goes from 0 to 1 (although, there is a secret tool to help us later, if you need to do that). Let's define a maximum and 
 									a minimum. In my opinion, a radar chart looks better if none of the sides are completely filled out. I think they look the best if it is close to 
 									filling out a side, but doesn't entirely, with that in mind, let's define some parameters already!</p>
+									<div class = "centerimg">
+									<pre>
+									<code>
+										min_max <- data.frame(
+  										row.names = c("Min","Max"),
+  										HP = c(0, 110),
+  										Attack = c(0,110),
+  										Defense = c(0,110),
+  										Special_Attack = c(0,110),
+  										Special_Defense = c(0,110),
+  										Speed = c(0,110)
+										)
+										min_max	
+									</code>	
+									</pre>
+									</div>
 										
 									
 		<!-- Scripts -->
