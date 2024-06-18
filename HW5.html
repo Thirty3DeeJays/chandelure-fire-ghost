@@ -356,7 +356,7 @@ margin-right: 300px;
 									<div class = "centerimg">
 									<pre>
 									<code>
-										base_stats_with_name <- base_stats %>% rownames_to_column("PokeNames")
+										base_stats_with_names <- base_stats %>% rownames_to_column("PokeNames")
 										base_stats_with_names
 									</code>	
 									</pre>
@@ -378,7 +378,7 @@ margin-right: 300px;
 									<div class = "centerimg">
 									<pre>
 									<code>
-									ggradar(base_stats_with_name[1,],
+									ggradar(base_stats_with_names[1,],
        									 values.radar = c("0","55","110"),
       									  grid.min = 0,
        									 grid.mid = 55,
@@ -395,7 +395,31 @@ margin-right: 300px;
 									<span class = "image main">
 									<img src="VenuStatsGG2.png" alt>
 									</span>
-										
+									<p>Now, in order to see all three Pokemon, we just need to change a couple things about the code, but once we do that, we have
+									a pretty good chart!</p>
+									<div class = "centerimg">
+									<pre>
+									<code>
+										ggradar(base_stats_with_names,
+        									values.radar = c("0","55","110"),
+        									grid.min = 0,
+        									grid.mid = 55,
+        									grid.max = 110,
+        									group.line.width = 2, 
+        									group.point.size = 4,
+        									group.colours = c("#ABBEDA","#ED9F5F","#5AA2A1"),
+        									background.circle.colour = "white",
+        									gridline.mid.colour = "grey"
+										)
+									</code>	
+									</pre>
+									</div>
+									<p><b>!!!IMPORTANT!!!</b> GGRadar will put your points in alphabetical order, make sure if you want certain colors to go to certain stats,
+									order them in alphabetical order, and then put the colors in that order. I wanted blue to go with Blastoise, orange with Charizard,
+									and Green with Venusaur, so I ordered my colors in the 'group.colors' command to fit that.</p>
+									<h3>Conclusion</h3>
+									<p>This is the end of the tutorial. If you have any questions, please message me on discord under the username "Thirty3DeeJays". I hope this
+									tutorial is simple to follow! :)</p>
 									
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
