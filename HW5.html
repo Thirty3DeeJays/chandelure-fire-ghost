@@ -261,19 +261,25 @@ margin-right: 300px;
 									<p>Theres a lot of arguements you can add to the inside of the "radarchart" parenthesis. These are mainly to mess with the look of the chart
 									and to make it look nicer. I will add some basic ones with this code, including:
 									<ul>
-  									<li>axistype = 4: enables "caxislabels" to show</li>
-  									<li>caxislabels = c(0,22.5,55,82.5,110)</li>
-  									<li>There is more than 2 data points to be shown.</li>
-									<li>Each row following the first two are your data points.</li>
+  									<li>'axistype' = 4: enables "caxislabels" to show</li>
+  									<li>'caxislabels' = c(0,22.5,55,82.5,110): shows the 0%, 25%, 50%, 75%, and 100% of the radar chart and its lines. (find those out yourself for different data)</li>
+									<li>'axislabelcol' = "chartreuse3": chooses the color of the labels on the axis</li>
+  									<li>Polygon Options, which include: 'pcol' (chooses line color), 'pfcol' (chooses fill color),
+									'plwd' (line width), and 'plty' (line type; can be “solid”, “dashed”, “dotted”, “dotdash”, “longdash”, or “twodash”)</li>
+									<li>Grid Options, which includes: 'cglcol' (chooses line color), 'cglty' (line type, same as before), and 'cglwd' (line width)</li>
 									</ul></p>
+									<p><b>!!!IMPORTANT!!!</b>When using 'pfcol', using the 'scales::alpha()' makes a shade rather that making the polygon the full color. Use 'alpha("color",[number between 0 and 1])</p>
+									<p>Lets see some of those changes in action! Here is some updated code:</p>
 									<div class = "centerimg">
 									<pre>
 									<code>
-
+										VenuRadar <- radarchart(VenusaurStats, axistype = 4, caxislabels = c(0,27.5,55, 82.5, 110), axislabcol = "chartreuse3",
+                        							pfcol = scales::alpha("#5AA2A1",0.4), pcol = "#5AA2A1", plty = "solid", cglcol = "gray",
+                        							cglty = "solid", cglwd = 1.3)
 									</code>	
 									</pre>
 									</div>
-									
+									<p>And you should get something like this!</p>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
