@@ -345,6 +345,25 @@ margin-right: 300px;
 									</pre>
 									</div>
 									<p>And here is the finished product!</p>
+									<div class = "image main">
+									<img src="All3Sep.png" alt>
+									</span>
+									<p>We do have one more way to make plots. This section will be shorter.</p>
+									<h3>GGPLOT2/GGRADAR</h3>
+									<p>GGRadar is worse in my opinion, however it is good if you have data on different scales. I won't be getting different data for this, but it is good if you need that sort of thing.
+									You can find more information about scaling data <a href="https://scales.r-lib.org">here.</a> Keep in the same R Script for this. To plot Venusaur, lets take a look at our "base_stats" item. We currently have our
+									rows as the 6 Pokemon stats, we would like to update that so that our Pokemon names are also in a row. This is simple.</p>
+									<div class = "centerimg">
+									<pre>
+									<code>
+										base_stats_with_name <- base_stats %>% rownames_to_column("PokeNames")
+										base_stats_with_names
+									</code>	
+									</pre>
+									</div>
+									<p>Next, you're going to want to make the plot using the ggradar function.<b>PRO TIP:</b>If letters are getting cut off of your labels, press the 
+										"Zoom" button to get a full look at the chart.</p>
+									
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
