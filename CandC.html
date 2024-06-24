@@ -20,11 +20,7 @@
 			width: 50%;
 			float: left;
 			display: none;
-		}
-		#radarg1 {
-			display: none;
-			
-		}
+		}	
 		.graph2 {
 			width: 50%;
 			float: left;
@@ -168,6 +164,8 @@
   background-color: #f40f30;
   color: black;
 }
+	.hidden { display: none; }
+      .visible { display: block; }
 	</style>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -294,8 +292,12 @@
 					}
 				}
 				function radar1() {
-					let img=document.getElementById("radarg1");
-						img.src="RadarValo/TenzRadar1.png";
+      					const showImageButton = document.getElementById("button button1");
+      					const myImage = document.getElementById("radarg1");
+      					showImageButton.addEventListener("click", () => { 
+         				myImage.classList.toggle("visible"); 
+      					});
+      					}
 				}
 				function buttonpress1() {
 					radar1();
