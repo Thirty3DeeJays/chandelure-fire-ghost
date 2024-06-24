@@ -19,7 +19,7 @@
 		.graph1 { 
 			width: 50%;
 			float: left;
-			display: block;
+			display: none;
 		}
 		.graph2 {
 			width: 50%;
@@ -220,10 +220,10 @@
 			<script>
 				function buttonpress1() {
 					var x = document.getElementById("viz1719199253090");
-					if (x.style.display === "none") {
-						x.style.display = "block";
-					} else {
+					if (x.style.display === "block") {
 						x.style.display = "none";
+					} else {
+						x.style.display = "block";
 					}
 				}
 				function buttonpress2() {
